@@ -10,3 +10,12 @@ import './styles/app.scss';
 
 // start the Stimulus application
 import './bootstrap';
+
+// require bootsrtap js
+// require('bootstrap');
+
+// import bootstrap js
+import('bootstrap');
+
+// import specific components
+// import { Tooltip, Toast, Popover } from 'bootstrap';
