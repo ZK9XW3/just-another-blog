@@ -1,5 +1,10 @@
-@import "~bootstrap/scss/bootstrap";
 
 body {
     background-color: lightgray;
 }
+
+// on importe les fichiers pour bootswatch et bootstrap
+@import "~bootswatch/dist/minty/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/minty/bootswatch";
+
