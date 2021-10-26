@@ -1,10 +1,85 @@
 
+// custom variables
+
+
+
 body {
     background-color: lightgray;
 }
 
+.navbar {
+    font-size: x-large;
+    width: 100vw;
+}
+
+.title-container {
+
+    .title-container__title {
+        padding: 2rem 0;
+        margin-bottom: 0;
+        width: 100vw;
+    }
+
+}
+
+section {
+
+    padding-bottom: 2rem;
+
+    .articles-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 2rem;
+        padding-bottom: 0;
+        padding-left: auto;
+        width: 100vw;
+    
+        .__article {
+            display: flex;
+            flex-direction: column;
+            margin: 5rem;
+            max-width: 700px;
+            // display: none;
+
+
+            .__img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            p {
+                padding-top: 1rem;
+            }
+
+            h3 {
+                margin: 0;
+                padding-top: 1rem;
+            }
+        }
+    }
+
+    .btn {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    section{
+        .articles-section {
+            .display-none-992px {
+                display: none;
+            }
+        }
+    }
+
+}
+
 // on importe les fichiers pour bootswatch et bootstrap
-@import "~bootswatch/dist/minty/variables";
+// @import "~bootswatch/dist/minty/variables";
+@import "./_variables";
 @import "~bootstrap/scss/bootstrap";
-@import "~bootswatch/dist/minty/bootswatch";
+@import "./_boostwatch";
 
