@@ -24,12 +24,12 @@ section {
     // font-size: large;
 }
 
-.articles {
+.posts {
 
     padding-bottom: 2rem;
 
 
-    .articles-section {
+    .posts-section {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -37,7 +37,7 @@ section {
         padding-bottom: 0;
         padding-left: auto;
     
-        .__article {
+        .__post {
             display: flex;
             flex-direction: column;
             margin: 5rem;
@@ -202,13 +202,13 @@ footer {
     }
 
 
-    .articles {
-        .articles-section {
+    .posts {
+        .posts-section {
 
             display: flex;
             justify-content: center;
 
-            .__article {
+            .__post {
                 width: 80%;
 
             }
