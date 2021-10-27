@@ -1,10 +1,273 @@
 
+// custom variables
+
+
+
 body {
     background-color: lightgray;
 }
 
+.navbar {
+    font-size: x-large;
+}
+
+.title-container {
+
+    .title-container__title {
+        padding: 2rem 0;
+        margin-bottom: 0;
+    }
+
+}
+
+section {
+    // font-size: large;
+}
+
+.articles {
+
+    padding-bottom: 2rem;
+
+
+    .articles-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 2rem;
+        padding-bottom: 0;
+        padding-left: auto;
+    
+        .__article {
+            display: flex;
+            flex-direction: column;
+            margin: 5rem;
+            width: 33%;
+            max-width: 700px;
+
+
+            .__img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            p {
+                padding-top: 1rem;
+            }
+
+            h3 {
+                margin: 0;
+                padding-top: 1rem;
+            }
+        }
+    }
+
+    .btn {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.about {
+
+    .about-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 5rem;
+        padding-bottom: 6rem;
+
+        .display-1404px {
+            display: none;
+        }
+
+        .__img-about {
+            padding-right: 6rem;
+            padding-top: 4rem;
+            width: 50%;
+            max-width: 100%;
+            min-width: 500px;
+            height: auto;
+        }
+
+        .__text {
+
+            width: 50%;
+            position: relative;
+
+            h2 {
+                margin-bottom: 2rem;
+                padding-top: 10%;
+            }
+
+            p {
+                max-height: 60%;
+                overflow: auto;
+            }
+
+
+            .__links {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                // flex-wrap: wrap;
+                position: absolute;
+                bottom: 1%;
+
+                .__linkedIn {
+                    min-width: 300px;
+                }
+
+                .__facebook {
+                    min-width: 250px;
+                }
+
+                .__img-logo {
+                    display: inline;
+                    width: 30%;
+                    padding-top: 0;
+                    padding-right: 0.5rem;
+                    // width: 100%;
+                    max-width: 60px;
+                    height: auto;
+                }
+
+                a {
+                    display: inline;
+                    width: 60%;
+                }
+            }
+        }
+        
+    }
+}
+
+footer {
+
+    .__links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+    
+    .__credits {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    a {
+        padding: 0.5rem 1rem;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    
+    h1 {
+        font-size: 4rem !important;
+    }
+    
+    .nav-link {
+        font-size: 3rem;
+    }
+
+    section {
+        font-size: 2rem;
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        h3 {
+            font-size: 3rem;
+        }
+
+        .__links {
+
+            a {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    footer {
+        a {
+            font-size: 2rem;
+        }
+    }
+
+
+    .articles {
+        .articles-section {
+
+            display: flex;
+            justify-content: center;
+
+            .__article {
+                width: 80%;
+
+            }
+            .display-none-992px {
+                display: none;
+            }
+        }
+
+        button {
+            font-size: 2rem;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1404px) {
+    .about {
+        .about-section {
+
+            flex-direction: column;
+            align-items: center;
+            padding-top: 2rem;
+            position: static;
+            // width: 60%;
+
+            .display-1404px {
+                display: block;
+                padding-bottom: 1rem;
+            }
+            
+            .__img-about {
+
+                padding-right: 0;
+                padding-top: 0;
+
+            }
+
+            .__text {
+
+                width: 70%;
+                padding-top: 2rem;
+
+                .display-none-1404px {
+                    display: none;
+                }
+
+                .__links {
+                    position: static;
+                }
+
+
+            }
+        }
+    }
+}
+
 // on importe les fichiers pour bootswatch et bootstrap
-@import "~bootswatch/dist/minty/variables";
+// @import "~bootswatch/dist/minty/variables";
+@import "./_variables";
 @import "~bootstrap/scss/bootstrap";
-@import "~bootswatch/dist/minty/bootswatch";
+@import "./_boostwatch";
 
