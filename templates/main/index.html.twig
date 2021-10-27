@@ -8,7 +8,7 @@
 {% include "title.html.twig" %}
 
 <!--custom html-->
-<section class="bg-primary articles">
+<section class="articles bg-primary ">
 	<div class="articles-section">
 		<div class="__article">
 			<img class="__img" src="{{asset("img/article-conception.jpg")}}" alt="article-conception" width="700px">
@@ -29,9 +29,9 @@
 			<a href="http://">read</a>
 		</div>
 	</div>
-	<button type="button" class="btn btn-secondary">All Articles</button>c
+	<button type="button" class="btn btn-secondary">All Articles</button>
 </section>
-<section class="bg-pinkish about">
+<section class="about bg-pinkish">
 	<div class="about-section">
 		<h2 class="text-green display-1404px">About me</h2>
 		<img class="__img-about" src="{{asset("img/about-me.jpg")}}" alt="" class="__img" width="700px">
@@ -52,4 +52,6 @@
 	</div>
 </section>
 
+<!-- include footer-->
+{% include "footer.html.twig" %}
 {% endblock %}
