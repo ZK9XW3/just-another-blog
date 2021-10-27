@@ -153,6 +153,10 @@ legend {
     color: $primary;
 }
 
+.text-secondary {
+  color: $secondary;
+}
+
 // Links color
 
 a {
@@ -164,6 +168,10 @@ a {
 .bg-primary {
     // background-color: $primary;
     background-color: #87baab;
+}
+
+.bg-grey {
+  background-color: $bg-grey;
 }
 
 .bg-pinkish {

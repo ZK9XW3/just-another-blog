@@ -8,7 +8,7 @@
 {% include "title.html.twig" %}
 
 <!--custom html-->
-<section class="bg-primary">
+<section class="bg-primary articles">
 	<div class="articles-section">
 		<div class="__article">
 			<img class="__img" src="{{asset("img/article-conception.jpg")}}" alt="article-conception" width="700px">
@@ -19,20 +19,37 @@
 		<div class="__article display-none-992px">
 			<img class="__img" src="{{asset("img/article-conception.jpg")}}" alt="article-conception" width="700px">
 			<h3>Article title</h3>
-			<p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, consectetur tempora, numquam deleniti vel saepe quos est facere quas eos sed voluptate, harum a! Magni, maxime alias! Aperiam beatae obcaecati facere eligendi aliquam aut doloribus assumenda est, impedit maxime laudantium eum a accusamus quod illum molestiae consectetur temporibus qui eos.</p>
+			<p class="text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quas aperiam ex delectus vero asperiores sapiente, at magni nobis suscipit, veniam, maxime eveniet iste. Eos rem maiores at soluta praesentium!</p>
 			<a href="http://">read</a>
 		</div>
 		<div class="__article display-none-992px">
 			<img class="__img" src="{{asset("img/article-conception.jpg")}}" alt="article-conception" width="700px">
 			<h3>Article title</h3>
-			<p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, consectetur tempora, numquam deleniti vel saepe quos est facere quas eos sed voluptate, harum a! Magni, maxime alias! Aperiam beatae obcaecati facere eligendi aliquam aut doloribus assumenda est, impedit maxime laudantium eum a accusamus quod illum molestiae consectetur temporibus qui eos.</p>
+			<p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, nemo!</p>
 			<a href="http://">read</a>
 		</div>
 	</div>
-	<button type="button" class="btn btn-secondary">All Articles</button>
+	<button type="button" class="btn btn-secondary">All Articles</button>c
 </section>
-<div class="about-section">
-
-</div>
+<section class="bg-pinkish about">
+	<div class="about-section">
+		<h2 class="text-green display-1404px">About me</h2>
+		<img class="__img-about" src="{{asset("img/about-me.jpg")}}" alt="" class="__img" width="700px">
+		<div class="__text">
+			<h2 class="text-green display-none-1404px">About me</h2>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore harum quibusdam nostrum deserunt amet ullam quod adipisci, veritatis, corporis eius, non dolore. Temporibus, cumque. Earum, nemo! Eligendi nulla libero sed dolorum aut iste! Voluptatibus possimus nihil earum aliquid itaque, nulla facere voluptas quae ipsa exercitationem quibusdam labore magni blanditiis non animi quia maxime totam minus excepturi? Placeat, voluptatibus. Iure natus veniam odio sint reprehenderit, quam nihil a suscipit officia obcaecati laboriosam, impedit placeat. Cumque quam dolor ab voluptas aspernatur modi!</p>
+			<div class="__links">
+				<div class="__linkedIn">
+					<img class="__img-logo" src="{{asset("img/linkedin.png")}}" alt="" width="70px">
+					<a href="https://linkedin.com/in/dhery-pa">linkedin.com/in/dhery-pa</a>
+				</div>
+				<div class="__facebook">
+					<img class="__img-logo" src="{{asset("img/linkedin.png")}}" alt="" width="70px">
+					<a href="https://linkedin.com/in/dhery-pa">linkedin.com/in/dhery-pa</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 {% endblock %}
