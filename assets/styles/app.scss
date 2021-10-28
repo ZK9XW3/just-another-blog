@@ -68,6 +68,40 @@ body {
     }
 }
 
+.post-content {
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+    padding: 2rem 8rem;
+    
+    .__post-text {
+        
+        width: 60%;
+        position: relative;
+        
+        .__paragraph {
+            padding-right: 5rem;
+        }
+
+        .__date {
+            // position: absolute;
+            // bottom: 4px;
+            // color: blue;
+            font-weight: lighter;
+        }
+    }
+
+    .__post-img {
+        width: 40%;
+        margin-top: 3rem;
+    
+        .__img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
 .about {
 
     .about-section {
@@ -250,7 +284,6 @@ footer {
         }
     }
 
-
     .posts {
         .posts-section {
 
@@ -310,6 +343,30 @@ footer {
 
 
             }
+        }
+    }
+
+    .post-content {
+
+        flex-direction: column-reverse;
+        align-items: center;
+
+        .__post-text {
+            width: 80%;
+            // text-align: center;
+
+            h2 {
+                text-align: center;
+                padding: 2rem 0;
+            }
+
+            .__paragraph {
+                padding: 0;
+            }
+        }
+
+        .__post-img {
+            width: 80%;
         }
     }
 }
