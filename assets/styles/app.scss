@@ -1,7 +1,11 @@
+// custom/modify bootstrap scss
 
-// custom variables
+.container-fluid {
+    padding: 0 2rem !important;
+}
 
 
+// custom scss
 
 body {
     background-color: lightgray;
@@ -20,9 +24,6 @@ body {
 
 }
 
-section {
-    // font-size: large;
-}
 
 .posts {
 
@@ -140,6 +141,54 @@ section {
             }
         }
         
+    }
+}
+
+.section-list {
+
+    // padding: 0 2rem;
+
+    .list {
+
+        width: 90%;
+        padding: 1rem 0;
+        margin-left: 5%;
+        margin-right: auto;
+    
+        .list__img {
+            width: 100%;
+            height: auto;
+        }
+
+        div {
+            padding: 2rem 1rem;
+            position: relative;
+
+            .__post__title {
+                padding-top: 1rem;
+            }
+
+
+            .list__link {
+                position: absolute;
+                bottom: 3px;
+            }
+        }
+    }
+}
+
+.button-section {
+
+    padding: 3rem 0;
+    text-align: center;
+
+    .button-section__button {
+
+        // margin-left: 46%;
+        // margin: auto;
+        background-color: white;
+        color: #2b59c3;
+        padding: 1rem 3rem;
     }
 }
 
