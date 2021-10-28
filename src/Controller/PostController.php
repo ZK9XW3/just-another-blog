@@ -9,12 +9,25 @@ use Symfony\Component\Routing\Annotation\Route;
 class PostController extends AbstractController
 {
     /**
-     * @Route("/post", name="post")
+     * @Route("/posts", name="posts_list")
      */
-    public function index(): Response
+    public function postsList(): Response
     {
-        return $this->render('post/index.html.twig', [
+        return $this->render('post/posts-list.html.twig', [
             'controller_name' => 'PostController',
         ]);
     }
+
+    /**
+     * @Route("/post/id", name="post")
+     */
+    public function post(): Response
+    {
+        return $this->render('post/post.html.twig', [
+            'controller_name' => 'PostController',
+            // 'urlController' => $this->container->get('router')->getContext()->getBaseUrl(),
+        ]);
+    }
+
 }
+
