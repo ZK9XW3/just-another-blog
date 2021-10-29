@@ -242,12 +242,14 @@ body {
         margin-right: auto;
         text-align: center;
 
+
         h3 {
             margin-bottom: 0;
 
             .form-label {
                 padding-top: 1rem;
             }
+
         }
 
         .form-btn {
@@ -346,7 +348,11 @@ footer {
             margin-right: auto;
 
             .form-label {
-                font-size: xxx-large;
+                font-size: xx-large;
+            }
+
+            .form-control {
+                font-size: xx-large;
             }
 
         }
