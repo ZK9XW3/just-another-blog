@@ -1,35 +1,32 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello LoginController!{% endblock %}
+{% block title %}Login{% endblock %}
 
 {% block body %}
 {% include "navbar.html.twig" %}
 {% include "title.html.twig" %}
 
 <!-- Custom Html -->
+
+<!-- if ERROR -->
 {% if error %}
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
-<form method="post" action="{{ path('login') }}" accept-charset="UTF-8">
-    {# {{ csrfInput() }}
-    <input type="hidden" name="action" value="users/login"> #}
-
-    <h3><label for="loginEmail">Email</label></h3>
-    <input id="username" type="text" name="_username"
-        value="{{ last_username }}">
-
-    <h3><label for="password">Password</label></h3>
-    <input id="password" type="password" name="_password">
-
-    <input type="submit" value="Login">
-
-    <!-- hidden CSRF token -->
-    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-
-</form>
-
-{# <p><a href="">Forgot your password?</a></p> #}
-
+<!-- Login Form-->
+<div class="form-container bg-primary">
+    <h2>Login</h2>
+    <form class="form" method="post" action="{{ path('login') }}" accept-charset="UTF-8">
+        <h3><label class="form-label text-white" for="loginEmail">Email</label></h3>
+        <input class="form-control" id="username" type="text" name="_username"
+            value="{{ last_username }}">
+        <h3><label class="form-label text-white" for="password">Password</label></h3>
+        <input class="form-control" id="password" type="password" name="_password">
+        <input class="btn btn-secondary btn-lg form-btn" type="submit" value="Login">
+        <!-- hidden CSRF token -->
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+    </form>
+    {# <p><a href="">Forgot your password?</a></p> #}
+</div>
 {% include "footer.html.twig" %}
 {% endblock %}
