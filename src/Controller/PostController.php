@@ -14,7 +14,7 @@ class PostController extends AbstractController
      */
     public function postsList(PostsRepository $postsRepository): Response
     {
-        $postsList = $postsRepository->findAll();
+        $postsList = $postsRepository->findBy([], ['created_at' => 'DESC']);
 
         return $this->render('post/posts-list.html.twig', [
             'postsList' => $postsList,
