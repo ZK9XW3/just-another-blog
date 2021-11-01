@@ -28,6 +28,9 @@ body {
 .posts {
 
     padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 
     .posts-section {
@@ -53,6 +56,11 @@ body {
 
             p {
                 padding-top: 1rem;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
             }
 
             h3 {
@@ -64,7 +72,7 @@ body {
 
     .btn {
         margin: 0 auto;
-        display: block;
+        // display: block;
     }
 }
 
@@ -189,19 +197,26 @@ body {
         margin-left: 5%;
         margin-right: auto;
     
-        .list__img {
-            width: 100%;
-            height: auto;
-        }
-
+        
         div {
             padding: 2rem 1rem;
             position: relative;
+
+            .list__img {
+                width: 100%;
+                height: auto;
+            }
 
             .__post__title {
                 padding-top: 1rem;
             }
 
+            .list__text {
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+            }
 
             .list__link {
                 position: absolute;
@@ -372,8 +387,9 @@ footer {
             }
         }
 
-        button {
+        a {
             font-size: 2rem;
+            text-decoration: none;
         }
     }
 
