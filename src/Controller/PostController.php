@@ -29,7 +29,7 @@ class PostController extends AbstractController
         $post = $postsRepository->find($id);
 
         return $this->render('post/post.html.twig', [
-            'posts' => $post,
+            'post' => $post,
         ]);
     }
 
