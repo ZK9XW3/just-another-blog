@@ -10,9 +10,9 @@
 <!-- section.post-content>div.__post-text>h2+p.__paragraph^img.__post-img -->
 <section class="post-content bg-primary">
     <div class="__post-text">
-        <h2>Post title</h2>
-        <p class="__paragraph text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, minima optio. Neque, cupiditate! Id a architecto sit velit ut voluptatum ipsa cumque tempore et obcaecati nulla odit expedita amet, sed illum adipisci libero alias odio dolores aliquid suscipit blanditiis qui possimus consectetur. Repellat accusamus deserunt hic? Sapiente repudiandae eveniet rem. Deleniti quis distinctio maxime iusto fugiat adipisci consequatur aperiam amet in accusantium quo culpa, tempore impedit eveniet odio dolores. Perferendis doloribus vitae aperiam fugiat nisi velit provident, quam illum, laboriosam, placeat odit nobis enim sit cupiditate natus est distinctio hic ipsa libero porro animi mollitia consequuntur voluptatum. Sapiente, cum quaerat. Praesentium, quas. Itaque eos vero molestiae nesciunt ab optio consequuntur reprehenderit, non voluptatum neque voluptatem, maiores doloremque magni? Odio esse fugit exercitationem delectus autem? Nesciunt reiciendis eos aspernatur quasi similique nam in fuga iusto odio rem enim debitis provident laboriosam iure quidem libero sunt quod blanditiis, aliquam vero! Deserunt excepturi ipsam dolore dolorum quo cumque rem nulla eum, tenetur adipisci molestias fuga repudiandae perspiciatis consequatur reiciendis fugiat corrupti eos illo itaque? Enim inventore corporis, facilis laborum esse eum voluptatum ducimus eveniet, neque doloremque quaerat delectus, illum provident animi earum in recusandae nemo nihil id quia quibusdam totam. Culpa, assumenda tempora?</p>
-        <p class="__date text-white">Published on : <time datetime="2021-01-23">2021-01-23</time></p>
+        <h2>{{ post.title }}</h2>
+        <p class="__paragraph text-white">{{ post.text }}</p>
+        <p class="__date text-white">Published on : <time datetime="{{ post.createdAt|date('Y-m-d') }}">{{ post.createdAt|date('Y-m-d') }}</time></p>
     </div>
     <div class="__post-img">
         <img src="{{asset("img/post-conception.jpg")}}" alt="" class="__img" width="600px">
