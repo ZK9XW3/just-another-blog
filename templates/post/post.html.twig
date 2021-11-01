@@ -15,7 +15,7 @@
         <p class="__date text-white">Published on : <time datetime="{{ post.createdAt|date('Y-m-d') }}">{{ post.createdAt|date('Y-m-d') }}</time></p>
     </div>
     <div class="__post-img">
-        <img src="{{asset("img/post-conception.jpg")}}" alt="" class="__img" width="600px">
+        <img src="{{asset(post.image)}}" alt="" class="__img" width="600px">
     </div>
 </section>
 
