@@ -12,7 +12,7 @@
         <!--(div.col.list__post-$>img[class="list__img" src=""]+p.list__text{Lorem ipsum dolor sit amet. Et enim optio est fuga fuga ut consequatur molestiae ex voluptatum sunt quo laborum Quis est quia saepe. Quo laboriosam eius cum atque tempora et ratione inventore hic nihil voluptas ad sint natus a distinctio cumque et deleniti.}+a.list__link{read})*20 -->
         {% for post in postsList %}
         <div class="col list__post-1">
-            <img src="{{asset(post.image)}}" alt="" class="list__img" width="500px">
+            <img src="{{asset('uploads/posts/' ~ post.image)}}" alt="" class="list__img" width="500px">
             <h3 class="__post__title">{{ post.title }}</h3>
             <p class="list__text text-white">{{ post.text }}</p>
             <a href="{{ path('post', {id: post.id}) }}" class="list__link">read</a>

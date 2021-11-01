@@ -13,7 +13,7 @@
 		{% for postToDisplay in postsToDisplay %}
 			{% if loop.last %}
 			<div class="__post">
-				<img class="__img" src="{{asset(postToDisplay.image)}}" alt="post-conception" width="700px">
+				<img class="__img" src="{{asset('uploads/posts/' ~ postToDisplay.image)}}" alt="post-conception" width="700px">
 				<h3>{{ postToDisplay.title }}</h3>
 				<p class="text-white">{{ postToDisplay.text }}</p>
 				<a href="{{ path('post', {'id': postToDisplay.id}) }}">read</a>
@@ -21,7 +21,7 @@
 			
 			{% else %}
 			<div class="__post display-none-992px">
-				<img class="__img" src="{{asset("img/post-conception.jpg")}}" alt="post-conception" width="700px">
+				<img class="__img" src="{{asset('uploads/posts/' ~ postToDisplay.image)}}" alt="post-conception" width="700px">
 				<h3>{{ postToDisplay.title }}</h3>
 				<p class="text-white">{{ postToDisplay.text }}</p>
 				<a href="{{ path('post', {'id': postToDisplay.id}) }}">read</a>
