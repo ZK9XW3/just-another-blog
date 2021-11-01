@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Posts;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
@@ -27,6 +28,15 @@ class PostsCrudController extends AbstractCrudController
             DateField::new('created_at')->hideOnForm(),
             TextField::new('image')->hideOnIndex(),
         ];
+    }
+
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud
+            // Display posts list by most recent
+            ->setDefaultSort(['created_at' => 'DESC'])
+            // Maximize posts List display
+            ->renderContentMaximized();
     }
     
 }
