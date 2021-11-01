@@ -10,42 +10,15 @@
 <section class="container-fluid bg-primary section-list">
     <div class="list row row-cols-sm-1 row-cols-lg-2 row-cols-xxl-3">
         <!--(div.col.list__post-$>img[class="list__img" src=""]+p.list__text{Lorem ipsum dolor sit amet. Et enim optio est fuga fuga ut consequatur molestiae ex voluptatum sunt quo laborum Quis est quia saepe. Quo laboriosam eius cum atque tempora et ratione inventore hic nihil voluptas ad sint natus a distinctio cumque et deleniti.}+a.list__link{read})*20 -->
+        {% for post in postsList %}
         <div class="col list__post-1">
             <img src="{{asset("img/post-conception.jpg")}}" alt="" class="list__img" width="500px">
-            <h3 class="__post__title">Post Title</h3>
-            <p class="list__text text-white">Lorem ipsum dolor sit amet. Et enim optio est fuga fuga ut consequatur molestiae ex voluptatum sunt quo laborum Quis est quia saepe. Quo laboriosam eius cum atque tempora et ratione inventore hic nihil voluptas ad sint natus a distinctio cumque et deleniti.</p>
-            <a href="" class="list__link">read</a>
+            <h3 class="__post__title">{{ post.title }}</h3>
+            <p class="list__text text-white">{{ post.text }}</p>
+            <a href="{{ path('post', {id: post.id}) }}" class="list__link">read</a>
         </div>
-        <div class="col list__post-2">
-            <img src="{{asset("img/post-conception.jpg")}}" alt="" class="list__img" width="500px">
-            <h3 class="__post__title">Post Title</h3>
-            <p class="list__text text-white">Lorem ipsum dolor sit amet. </p>
-            <a href="" class="list__link">read</a>
-        </div>
-        <div class="col list__post-3">
-            <img src="{{asset("img/post-conception.jpg")}}" alt="" class="list__img" width="500px">
-            <h3 class="__post__title">Post Title</h3>
-            <p class="list__text text-white">Lorem ipsum dolor sit amet. Et enim optio est fuga fuga ut consequatur molestiae ex voluptatum sunt quo laborum Quis est quia saepe. </p>
-            <a href="" class="list__link">read</a>
-        </div>
-        <div class="col list__post-4">
-            <img src="{{asset("img/post-conception.jpg")}}" alt="" class="list__img" width="500px">
-            <h3 class="__post__title">Post Title</h3>
-            <p class="list__text text-white">Lorem ipsum dolor sit amet. Et enim optio est fuga fuga ut consequatur molestiae ex voluptatum sunt quo laborum Quis est quia saepe. Quo laboriosam eius cum atque tempora et ratione inventore hic nihil voluptas ad sint natus a distinctio cumque et deleniti.</p>
-            <a href="" class="list__link">read</a>
-        </div>
-        <div class="col list__post-5">
-            <img src="{{asset("img/post-conception.jpg")}}" alt="" class="list__img" width="500px">
-            <h3 class="__post__title">Post Title</h3>
-            <p class="list__text text-white">Lorem ipsum dolor sit amet. Et enim optio est fuga fuga ut consequatur molestiae ex voluptatum sunt quo laborum Quis est quia saepe. Quo laboriosam eius cum atque tempora et ratione inventore hic nihil voluptas ad sint natus a distinctio cumque et deleniti.</p>
-            <a href="" class="list__link">read</a>
-        </div>
-        <div class="col list__post-6">
-            <img src="{{asset("img/post-conception.jpg")}}" alt="" class="list__img" width="500px">
-            <h3 class="__post__title">Post Title</h3>
-            <p class="list__text text-white">Lorem ipsum dolor sit amet. Et enim optio est fuga fuga ut consequatur molestiae ex voluptatum sunt quo laborum Quis est quia saepe. Quo laboriosam eius cum atque tempora et ratione inventore hic nihil voluptas ad sint natus a distinctio cumque et deleniti.</p>
-            <a href="" class="list__link">read</a>
-        </div>
+        {% endfor %}
+        
     </div>
 </section>
 {% set buttonSection = {'value': 'Back to top', 'endpoint': '/posts/#'} %}
