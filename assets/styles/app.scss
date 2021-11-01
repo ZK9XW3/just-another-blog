@@ -258,6 +258,47 @@ body {
     }
 }
 
+.form-container-registration {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    padding: 4rem;
+    text-align: center;
+
+    form {
+
+        width: 50%;
+        margin-left: 25%;
+        margin-right: auto;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            label {
+                color: white;
+                font-size: x-large;
+            }
+
+            input {
+                width: 100%;
+                height: 2rem;
+            }
+
+            [type=checkbox] {
+                height: 1rem;
+            }
+        }
+    
+        button {
+            background-color: #f7d6e0;
+        }
+    }
+}
+
 footer {
 
     .__links {
