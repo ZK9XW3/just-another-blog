@@ -12,6 +12,15 @@
     <div class="__post-text">
         <h2>{{ post.title }}</h2>
         <p class="__paragraph text-white">{{ post.text }}</p>
+        <p>
+            <span class="badge rounded-pill bg-secondary">
+            {% if post.category is not null %}
+            {{post.category.name}}
+            {% else %}
+            Category
+            {% endif %}
+        </span>
+        </p>
         <p class="__date text-white">Published on : <time datetime="{{ post.createdAt|date('Y-m-d') }}">{{ post.createdAt|date('Y-m-d') }}</time></p>
     </div>
     <div class="__post-img">
