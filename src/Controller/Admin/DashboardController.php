@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Posts;
+use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -31,6 +32,7 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linktoDashboard('Dashboard', 'fa fa-home'),
             MenuItem::section('Administrate'),
             MenuItem::linkToCrud('Posts', 'fas fa-pen-square', Posts::class),
+            MenuItem::linkToCrud('User', 'fas fa-user', User::class),
             MenuItem::section('Navigate'),
             MenuItem::linkToRoute('Back to main site', 'fa fa-home', 'main'),
             MenuItem::linkToLogout('logout', 'fa fa-sign-out'),
