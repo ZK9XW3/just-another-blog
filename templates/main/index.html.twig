@@ -7,6 +7,7 @@
 {% include "navbar.html.twig" %}
 {% include "title.html.twig" %}
 
+
 <!--custom html-->
 <section class="posts bg-primary ">
 	<div class="posts-section">
@@ -37,15 +38,15 @@
 		<img class="__img-about" src="{{asset("img/about-me.jpg")}}" alt="" class="__img" width="700px">
 		<div class="__text">
 			<h2 class="text-green display-none-1404px">About me</h2>
-			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio aliquid assumenda, suscipit accusantium dolorum, inventore id sit voluptates alias eaque soluta odit tempore beatae magni illo dolorem numquam, aliquam exercitationem ullam? Numquam architecto nihil adipisci possimus ipsam, doloribus hic doloremque neque ducimus itaque eos, error quo inventore. Error nemo temporibus voluptatem quia corporis excepturi suscipit debitis non, iste velit ab! Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+			<p>{{ user.about }}</p>
 			<div class="__links">
 				<div class="__linkedIn">
 					<img class="__img-logo" src="{{asset("img/linkedin.png")}}" alt="" width="70px">
-					<a href="https://linkedin.com/in/dhery-pa">linkedin.com/in/dhery-pa</a>
+					<a href="{{ user.socialLink1 }}">linkedin.com/in/dhery-pa</a>
 				</div>
 				<div class="__facebook">
-					<img class="__img-logo" src="{{asset("img/linkedin.png")}}" alt="" width="70px">
-					<a href="https://linkedin.com/in/dhery-pa">linkedin.com/in/dhery-pa</a>
+					<img class="__img-logo" src="{{asset("img/github.png")}}" alt="" width="70px">
+					<a href="{{ user.socialLink2 }}">github.com/ZK9XW3</a>
 				</div>
 			</div>
 		</div>
