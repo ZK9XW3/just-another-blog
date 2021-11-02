@@ -142,11 +142,10 @@ class Posts
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    public function setImage(?string $image): void
     {
         $this->image = $image;
 
-        return $this;
     }
 
     public function getSlug(): ?string
