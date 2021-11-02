@@ -37,6 +37,21 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $password;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $about;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $social_link_1;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $social_link_2;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -124,5 +139,41 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getAbout(): ?string
+    {
+        return $this->about;
+    }
+
+    public function setAbout(string $about): self
+    {
+        $this->about = $about;
+
+        return $this;
+    }
+
+    public function getSocialLink1(): ?string
+    {
+        return $this->social_link_1;
+    }
+
+    public function setSocialLink1(string $social_link_1): self
+    {
+        $this->social_link_1 = $social_link_1;
+
+        return $this;
+    }
+
+    public function getSocialLink2(): ?string
+    {
+        return $this->social_link_2;
+    }
+
+    public function setSocialLink2(string $social_link_2): self
+    {
+        $this->social_link_2 = $social_link_2;
+
+        return $this;
     }
 }
