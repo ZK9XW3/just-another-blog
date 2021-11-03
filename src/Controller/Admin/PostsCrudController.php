@@ -34,7 +34,7 @@ class PostsCrudController extends AbstractCrudController
             TextField::new('slug')->hideOnForm(), 
             AssociationField::new('category'),
             DateField::new('created_at')->hideOnForm(),
-            TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
+            TextField::new('imageFile')->setFormType(VichImageType::class),
             ImageField::new('image')->setBasePath('/uploads/posts')->onlyOnIndex(),
         ];
     }
