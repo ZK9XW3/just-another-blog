@@ -20,8 +20,8 @@
         "build": "encore production --progress"
     },
     "engines": {
-        "node": "v16.13.0.*",
-        "npm": "8.1.*"
+        "node": "v16.10.*",
+        "npm": "7.24.*"
     },
     "dependencies": {
         "bootswatch": "^5.1.3"
