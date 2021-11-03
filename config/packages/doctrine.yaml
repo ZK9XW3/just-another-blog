@@ -1,17 +1,17 @@
 doctrine:
     dbal:
         # The next line for local database
-        # url: '%env(resolve:DATABASE_URL)%'
+        url: '%env(resolve:DATABASE_URL)%'
 
         # The next Lines for Heroku server
         # configure these for your database server
-        driver: 'pdo_mysql'
-        server_version: '5.7'
-        charset: utf8mb4
-        default_table_options:
-            charset: utf8mb4
-            collate: utf8mb4_unicode_ci
-        url: '%env(resolve:JAWSDB_URL)%'
+        # driver: 'pdo_mysql'
+        # server_version: '5.7'
+        # charset: utf8mb4
+        # default_table_options:
+        #     charset: utf8mb4
+        #     collate: utf8mb4_unicode_ci
+        # url: '%env(resolve:JAWSDB_URL)%'
         # rename DATABASE_URL to JAWSDB_URL
 
         # IMPORTANT: You MUST configure your server version,
