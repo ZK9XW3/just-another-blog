@@ -19,6 +19,10 @@
         "watch": "encore dev --watch",
         "build": "encore production --progress"
     },
+    "engines": {
+        "node": "v17.0.*",
+        "npm": "8.1.*"
+    },
     "dependencies": {
         "bootswatch": "^5.1.3"
     }
