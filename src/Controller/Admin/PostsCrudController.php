@@ -3,6 +3,8 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Posts;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
@@ -44,6 +46,16 @@ class PostsCrudController extends AbstractCrudController
             ->setDefaultSort(['created_at' => 'DESC'])
             // Maximize posts List display
             ->renderContentMaximized();
+    }
+
+    public function configureActions(Actions $actions): Actions 
+    {
+        return $actions
+            ->setPermission(Action::NEW, 'ROLE_ADMIN')
+            ->setPermission(Action::DELETE, 'ROLE_ADMIN')
+            ->setPermission(Action::EDIT, 'ROLE_ADMIN')
+            ->setPermission(Action::BATCH_DELETE, 'ROLE_ADMIN')
+            ;
     }
     
 }
