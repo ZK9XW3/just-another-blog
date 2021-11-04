@@ -54,7 +54,7 @@ class RegistrationFormType extends AbstractType
                         'max' => 4096,
                     ]),
                     new Type([
-                        'type' => ('string'),
+                        'type' => ['alpha', 'digit'],
                         'message' => 'Your password must be at least 8 characters, letters or numbers'
                     ]),
                     
